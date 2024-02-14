@@ -10,6 +10,7 @@ function App() {
     <>
       <div className="nav-bar-container">
         <Nav className="nav-bar" />
+        <h1> checking github is updating</h1>
       </div>
       <BrowserRouter>
         <Routes>

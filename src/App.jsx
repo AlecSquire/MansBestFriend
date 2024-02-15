@@ -17,7 +17,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="/about" element={<About />} />
-            <Route path="/random-dog" element={<RandomDog />} />
+            <Route path="/dogs" element={<RandomDog />} />
           </Routes>
         </BrowserRouter>
       </div>

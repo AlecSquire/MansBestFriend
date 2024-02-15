@@ -3,9 +3,7 @@ import { Link } from "react-router-dom";
 import backgroundImage from "../assets/christopher-ayme-ocZ-_Y7-Ptg-unsplash.jpg"; // Import the background image
 
 export default function Hero() {
-  const handleHeroButton = (e) => {
-    e.preventDefault();
-  };
+  const handleHeroButton = () => {};
 
   return (
     <div
@@ -21,10 +19,11 @@ export default function Hero() {
         companionship into your life by connecting you with the perfect canine
         companion.
       </p>
-      <button className="button-hero" onClick={handleHeroButton}>
-        <Link to="RandomDogs" className="button-link"></Link>
-        Your new best friend is this way!
-      </button>
+      <Link to="/explore" className="button-link">
+        <button className="button-hero">
+          Your new best friend is this way!
+        </button>
+      </Link>
     </div>
   );
 }

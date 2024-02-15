@@ -13,6 +13,71 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+/* For headings */
+.inter-heading {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 700; /* Bold */
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+/* For paragraphs */
+.inter-paragraph {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Normal */
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+p {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400; /* Normal */
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+button {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+/* For buttons */
+.inter-button {
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500; /* Medium */
+  font-style: normal;
+  font-variation-settings: "slnt" 0;
+}
+
+.gentium-book plus-regular {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.gentium-book plus-bold {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.gentium-book plus-regular-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.gentium-book plus-bold-italic {
+  font-family: "Gentium Book Plus", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+
 li {
   font-weight: 500;
   color: #646cff;
@@ -28,6 +93,7 @@ body {
   place-items: center;
   min-width: 320px;
   min-height: 100vh;
+  font-family: inter;
 }
 
 h1 {
@@ -65,4 +131,10 @@ button:focus-visible {
   button {
     background-color: #f9f9f9;
   }
+}
+
+h1 {
+  font-family: "Inter", sans-serif;
+  font-weight: 700; /* Bold */
+  font-style: normal;
 }

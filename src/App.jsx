@@ -23,22 +23,3 @@ function App() {
 }
 
 export default App;
-
-// const MyComponent = () => {
-//   return (
-//     <p>You have arrived to the home page</p>
-//   )
-// }
-// root.render(
-//   <BrowserRouter> //You would usually want it to be the first component you render.
-//     <div className="App">
-//     <div>
-//       <div className="nav-bar-container">
-//         <Nav className="nav-bar" />
-//       <Routes>
-//         //The only things you can put in here are fragments and <Route> components.
-//         <Route path="/home" element={<MyComponent/>} />
-//       </Routes>
-//     </div>
-//   </BrowserRouter>
-// )

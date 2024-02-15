@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import DogNames from "../dogNames";
+import DogNames from "./DogNames";
 
 export default function RandomDog() {
   const [currentDog, setCurrentDog] = useState(null);

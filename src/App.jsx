@@ -8,16 +8,17 @@ import Hero from "./components/Hero";
 function App() {
   return (
     <>
-      <div className="nav-bar-container">
-        <Nav className="nav-bar" />
-        <h1> checking github is updating</h1>
+      <div className="app-container">
+        <header>
+          <Nav className="nav-bar" />
+        </header>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Hero />} />
+            <Route path="/random-dog" element={<RandomDog />} />
+          </Routes>
+        </BrowserRouter>
       </div>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<Hero />} />
-          <Route path="/random-dog" element={<RandomDog />} />
-        </Routes>
-      </BrowserRouter>
     </>
   );
 }

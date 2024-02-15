@@ -1,12 +1,32 @@
-body {
-  text-align: center;
+* {
+  box-sizing: border-box;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+html,
+body {
+  margin: 0;
+  padding: 0
+  font-family: "Inter", sans-serif;
+
+}
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+body {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+body {
+  text-align: center;
+  width: 100%;
+  height: 100vh;
+}
+.app-container {
+  width: 550px;
+  height: 570px;
 }
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
@@ -30,65 +50,82 @@ body {
   }
 }
 
-.read-the-docs {
-  color: #888;
+.nav-bar {
+  background-color: #fff7ed;
+  text-decoration: none;
+  color: black;
+  list-style-type: none;
+    height: 110px;
+    display: flex;
+    align-items: center;
+    padding-block: 10px;
+    justify-content: space-around;
+    width:100%;
+    gap: 20px;
+    padding: -12px ;
 }
-.navbar {
-  display: flex;
-  justify-content: space-between; /* Align items to the start and end of the container */
-  align-items: center; /* Center-align items vertically */
-  padding: 20px; /* Add padding to the navbar */
-  background-color: #333; /* Set background color */
-  color: white; /* Set text color */
-}
+.nav-bar h1 {
+  font-size: 2rem;
+ } 
 
-.navbar ul {
-  list-style-type: none; /* Remove bullet points from list */
-  display: flex; /* Make the list items flex items */
-}
-
-.navbar ul li {
-  margin-right: 20px; /* Add margin between list items */
-}
-
-.navbar ul li:last-child {
-  margin-right: 0; /* Remove margin from the last list item */
-}
-
-.navbar ul li a {
-  text-decoration: none; /* Remove underline from links */
-  color: white; /* Set link text color */
-}
-.nav-bar-options {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 100px;
-  cursor: pointer;
-}
-.nav-bar img {
-  width: 200px;
-  height: 200px;
+ .nav-bar h3 { 
+font-size: 1rem;
+color:#4D4D4D;
 }
 .navbar ul li a:hover {
   text-decoration: underline; /* Underline links on hover */
 }
-
 .hero-div {
-  background-color: #f9f9f9; /* Background color for the hero section */
-  padding: 50px; /* Padding around the content */
-  text-align: center; /* Center-align the content */
+  min-height: 350px;
+  width: 100%;
+  height: 550px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  padding: 450px 20px; /* Adjust padding to add space */
+  
+}
+
+.hero-div p {
+  line-height: 24px;
+  margin-bottom: 20px;
+  padding: 95px;
+  font-size:16px;
+  font-weight: 700;
+  font-style: italic;
+  
 }
 
 .hero-div h1 {
-  font-size: 2.5em; /* Adjust the font size of the heading */
-  margin-bottom: 20px; /* Add space below the heading */
-  color: #333;
+  font-size: 2.5em;
+  margin-bottom: 20px;
+  color: white;
+  font-weight: 700;
+  line-height: 42px;
+  padding: 45px 
 }
 
-.hero-div img {
-  max-width: 100%; /* Ensure the image doesn't exceed its container */
-  height: auto; /* Maintain the aspect ratio of the image */
-  border-radius: 8px; /* Add rounded corners to the image */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow */
+.button-hero {
+  background-color: #ff8c38;
+  color: white;
+  border-radius: 5%;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  background-color: #ff8c38;
+  border: none;
+  width: 100%;
+  height: 5rem;
+  margin-top: 27px;
+  padding-block: 0.75rem;
+  color: white;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: transform 0.1s ease-in-out;
+}
+
+.button-hero:hover {
+  transform: translate(1px, 1px);
 }

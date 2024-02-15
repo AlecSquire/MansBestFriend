@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 export default function RandomDog() {
   const [currentDog, setCurrentDog] = useState(null);
@@ -34,7 +34,7 @@ export default function RandomDog() {
             className="logo"
             src={currentDog.url}
             alt="Random Dog"
-            style={{ width: "60vw", height: "60vh" }}
+            style={{ width: "100%", height: "100%" }}
           />
           <h2>{currentDog.breeds[0].name}</h2>
           <p>{currentDog.breeds[0].description}</p>

@@ -5,9 +5,8 @@
 html,
 body {
   margin: 0;
-  padding: 0
+  padding: 0;
   font-family: "Inter", sans-serif;
-
 }
 
 body::-webkit-scrollbar {
@@ -20,17 +19,24 @@ body {
 }
 
 body {
+  display: flex;
   text-align: center;
   width: 100%;
-  height: 100vh;
+
+  min-height: 100vh; /* Ensure the body fills the viewport */
 }
+
 .app-container {
-  width: 550px;
-  height: 570px;
+  max-width: 550px; /* Set the maximum width for the content */
+  width: 100%; /* Ensure content fills the available width */
+  margin: 0 auto; /* Center the content horizontally */
+  background-color: #fff7ed;
 }
+
 .logo:hover {
   filter: drop-shadow(0 0 2em #646cffaa);
 }
+
 .logo.react:hover {
   filter: drop-shadow(0 0 2em #61dafbaa);
 }
@@ -55,26 +61,29 @@ body {
   text-decoration: none;
   color: black;
   list-style-type: none;
-    height: 110px;
-    display: flex;
-    align-items: center;
-    padding-block: 10px;
-    justify-content: space-around;
-    width:100%;
-    gap: 20px;
-    padding: -12px ;
+  height: 110px;
+  display: flex;
+  align-items: center;
+  padding-block: 10px;
+  justify-content: space-around;
+  width: 100%;
+  gap: 20px;
+  padding: -12px;
 }
+
 .nav-bar h1 {
   font-size: 2rem;
- } 
-
- .nav-bar h3 { 
-font-size: 1rem;
-color:#4D4D4D;
 }
+
+.nav-bar h3 {
+  font-size: 1rem;
+  color: #4d4d4d;
+}
+
 .navbar ul li a:hover {
   text-decoration: underline; /* Underline links on hover */
 }
+
 .hero-div {
   min-height: 350px;
   width: 100%;
@@ -83,18 +92,16 @@ color:#4D4D4D;
   flex-direction: column;
   justify-content: center;
   z-index: 2;
-  padding: 450px 20px; /* Adjust padding to add space */
-  
+  padding: 450px 20px; /* Padding applied */
 }
 
 .hero-div p {
   line-height: 24px;
   margin-bottom: 20px;
   padding: 95px;
-  font-size:16px;
+  font-size: 16px;
   font-weight: 700;
   font-style: italic;
-  
 }
 
 .hero-div h1 {
@@ -103,7 +110,7 @@ color:#4D4D4D;
   color: white;
   font-weight: 700;
   line-height: 42px;
-  padding: 45px 
+  padding: 45px;
 }
 
 .button-hero {
@@ -128,4 +135,42 @@ color:#4D4D4D;
 
 .button-hero:hover {
   transform: translate(1px, 1px);
+}
+.about-hero-image {
+  max-width: 100%;
+}
+
+.about-page-content {
+  padding-inline: 23px;
+  color: #161616;
+  margin-bottom: 55px;
+  height: 100%;
+}
+
+.about-page-content h1 {
+  line-height: 38px;
+}
+
+.about-page-content p {
+  line-height: 22px;
+}
+
+.about-page-cta {
+  background-color: #ffcc8d;
+  color: #161616;
+  padding-inline: 32px;
+  padding-bottom: 32px;
+  margin-inline: 27px;
+  border-radius: 5px;
+}
+
+.about-page-cta h2 {
+  margin: 0;
+  padding-block: 37px;
+}
+
+.about-page-cta .link-button {
+  background-color: #161616;
+  color: white;
+  border-radius: 10px;
 }

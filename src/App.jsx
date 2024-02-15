@@ -4,6 +4,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Nav from "./components/Nav";
 import RandomDog from "./components/RandomDog";
 import Hero from "./components/Hero";
+import About from "./components/About";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Hero />} />
+            <Route path="/about" element={<About />} />
             <Route path="/random-dog" element={<RandomDog />} />
           </Routes>
         </BrowserRouter>

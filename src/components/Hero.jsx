@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import backgroundImage from "../assets/christopher-ayme-ocZ-_Y7-Ptg-unsplash.jpg"; // Import the background image
 
 export default function Hero() {
@@ -14,13 +15,14 @@ export default function Hero() {
       }}
     >
       {" "}
-      <h1> Welcome to MansBestFreind - Where Furry Friendships Begin!</h1>
+      <h1> Welcome to MansBestFriend - Where Furry Friendships Begin!</h1>
       <p>
         We're matchmakers for furry friendships! Our mission is to bring joy and
         companionship into your life by connecting you with the perfect canine
         companion.
       </p>
       <button className="button-hero" onClick={handleHeroButton}>
+        <Link to="RandomDogs" className="button-link"></Link>
         Your new best friend is this way!
       </button>
     </div>

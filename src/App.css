@@ -1,5 +1,6 @@
 * {
   box-sizing: border-box;
+  width: 100%;
 }
 
 html,
@@ -21,13 +22,12 @@ body {
 body {
   display: flex;
   text-align: center;
-  width: 100%;
+  width: 100vw;
 
   min-height: 100vh; /* Ensure the body fills the viewport */
 }
 
 .app-container {
-  max-width: 550px; /* Set the maximum width for the content */
   width: 100%; /* Ensure content fills the available width */
   margin: 0 auto; /* Center the content horizontally */
   background-color: #fff7ed;
@@ -69,6 +69,7 @@ body {
   width: 100%;
   gap: 20px;
   padding: -12px;
+  position: relative;
 }
 
 .nav-bar h1 {
@@ -87,7 +88,7 @@ body {
 .hero-div {
   min-height: 350px;
   width: 100%;
-  height: 550px;
+  height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -122,7 +123,7 @@ body {
   text-decoration: none;
   background-color: #ff8c38;
   border: none;
-  width: 100%;
+  /* width: 70rem; */
   height: 5rem;
   margin-top: 27px;
   padding-block: 0.75rem;
@@ -136,8 +137,16 @@ body {
 .button-hero:hover {
   transform: translate(1px, 1px);
 }
+.about-hero-container {
+  max-height: 600px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
 .about-hero-image {
-  max-width: 100%;
+  width: 100%;
+  height: auto; /* Automatically adjust the height */
+  object-fit: cover;
 }
 
 .about-page-content {
@@ -173,4 +182,42 @@ body {
   background-color: #161616;
   color: white;
   border-radius: 10px;
+}
+
+.nav-links {
+  color: #000;
+}
+
+.mobile-nav-bar {
+  display: none;
+}
+
+@media (max-width: 590px) {
+  .mobile-nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    height: 15vh;
+  }
+  .HamburgerMenu {
+    size: 100%;
+  }
+}
+
+.hamburgerDown {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  position: absolute; /* Position the dropdown menu absolutely */
+  top: 10%; /* Adjust the top position to align with the bottom of the navbar */
+  left: 0; /* Adjust the left position as needed */
+  background-color: #fff; /* Add background color for the dropdown menu */
+  border: 1px solid #ccc; /* Add borders for the dropdown menu */
+  z-index: 999;
+  height: 90vh;
+}
+.hamnburger-nav-links {
+  padding: 3rem 3rem;
+  color: #4d4d4d;
+  list-style: none;
 }

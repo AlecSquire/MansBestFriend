@@ -1,3 +1,4 @@
+import "../App.css";
 import React, { useState, useEffect } from "react";
 import DogNames from "./DogNames";
 
@@ -53,7 +54,7 @@ export default function RandomDog() {
             className="logo"
             src={currentDog.url}
             alt="Random Dog"
-            style={{ width: "100%", height: "100%" }}
+            style={{ width: "100%", height: "100%", padding: "0% 20%" }}
           />
           <h1>Dog Name: {dogNamesArray[randomIndex]}</h1>
           <h2>Breed: {currentDog.breeds[0].name}</h2>

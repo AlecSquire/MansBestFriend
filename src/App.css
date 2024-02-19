@@ -33,14 +33,6 @@ body {
   background-color: #fff7ed;
 }
 
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
-}
-
 @keyframes logo-spin {
   from {
     transform: rotate(0deg);
@@ -131,6 +123,7 @@ body {
   font-weight: 700;
   border-radius: 5px;
   cursor: pointer;
+  width: 20%;
   transition: transform 0.1s ease-in-out;
 }
 
@@ -142,6 +135,9 @@ body {
   overflow: hidden;
   display: flex;
   align-items: center;
+}
+.hero-image {
+  display: flex;
 }
 .about-hero-image {
   width: 100%;
@@ -202,6 +198,27 @@ body {
   .HamburgerMenu {
     size: 100%;
   }
+  .ServiceCard {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* Two columns */
+    grid-gap: 20px; /* Gap between grid items */
+    padding: 20px;
+
+    color: #4d4d4d;
+  }
+
+  .ServiceCard img {
+    max-width: 100%;
+    max-height: 20%;
+    border-radius: 10px;
+    object-fit: cover;
+    width: 73%;
+    height: 72%;
+    overflow-x: hidden; /* Hide horizontal overflow */
+    overflow-y: hidden;
+    transform: translateY(0); /* Initially no vertical movement */
+    transition: transform 0.3s ease;
+  }
 }
 
 .hamburgerDown {
@@ -220,4 +237,130 @@ body {
   padding: 3rem 3rem;
   color: #4d4d4d;
   list-style: none;
+}
+
+.exploreButtons button {
+  font-size: 16px;
+  line-height: 23px;
+  /* background-color: #ffead0; */
+  /* color: #4d4d4d; */
+  margin: 20px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  display: flex;
+  justify-content: center;
+}
+.exploreButtons {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+  justify-content: center;
+}
+.exploreButtons button:hover {
+  transform: scale(1.1);
+}
+.explore {
+  font-size: 16px;
+  line-height: 23px;
+  color: #a89c87;
+}
+.explore h3 {
+  font-size: 32px;
+}
+.hero-image {
+  border-radius: 1%;
+  padding: 2%;
+
+  background-size: cover;
+  background-position: center;
+  height: 600px;
+}
+
+.health {
+  background-color: #c7ac5a;
+  color: #ffead0;
+}
+
+.care {
+  background-color: #aaac43;
+}
+
+.assistance {
+  background-color: #5a511a;
+}
+.ServiceCard {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Two columns */
+  grid-gap: 20px; /* Gap between grid items */
+  padding: 20px;
+  color: #4d4d4d;
+  cursor: pointer;
+  text-align: left;
+  font-weight: 900;
+  font-size: 2rem;
+}
+
+.ServiceCard .service-item {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+  object-fit: center;
+}
+
+.ServiceCard img {
+  max-width: 100%;
+  max-height: 600px;
+  border-radius: 10px;
+  object-fit: cover;
+
+  height: 90%;
+  overflow-x: hidden; /* Hide horizontal overflow */
+  overflow-y: hidden;
+  transform: translateY(0); /* Initially no vertical movement */
+  transition: transform 0.3s ease; /* Transition for movement */
+}
+
+.ServiceCard img:hover {
+  transform: translateY(-10px); /* Move image up slightly on hover */
+  opacity: 0.9; /* Reduce opacity slightly on hover */
+}
+
+@media (max-width: 933px) {
+  .ServiceCard img {
+    max-width: 100%;
+    max-height: 60%;
+
+    height: 90%;
+    grid-gap: 10px; /* Adjusted horizontal gap for smaller screens */
+  }
+}
+
+@media (max-width: 500px) {
+  .ServiceCard img {
+    max-width: 100%;
+    max-height: 40%;
+    grid-gap: 7px; /* Adjusted horizontal gap for smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .ServiceCard img {
+    max-width: 100%;
+    max-height: 30%;
+    grid-gap: 2px; /* Adjusted horizontal gap for smaller screens */
+  }
+}
+.footer {
+  display: flex;
+  background-color: #ffcc8d;
+  padding-top: 10%;
+}
+.footer-title {
+  color: #161616;
+  background-color: #fdcc8d;
+  margin-top: 20%;
+}
+.footer h1 {
+  flex-grow: 5;
+  flex-basis: 20%;
 }

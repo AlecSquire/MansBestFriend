@@ -1,5 +1,7 @@
 import React from "react";
+import Footer from "./components/Footer";
 import "./App.css";
+import ServiceCard from "./components/ServiceCard";
 import About from "./components/About";
 import Explore from "./components/Explore";
 import Contact from "./components/Contact";
@@ -16,6 +18,7 @@ function App() {
       <div className="app-container">
         <BrowserRouter>
           <Nav />
+
           {/* <MobileNav /> */}
 
           <Routes>
@@ -25,6 +28,7 @@ function App() {
             <Route path="/explore" element={<Explore />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     </>

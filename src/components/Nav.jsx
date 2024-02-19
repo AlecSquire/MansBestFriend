@@ -11,7 +11,7 @@ import MobileNav from "./MobileNav";
 
 function Nav() {
   const [desktop, setDesktop] = useState(true);
-  const [click, setClick] = useState(false);
+  const [click, setClick] = useState(true);
 
   useEffect(() => {
     const handleResize = () => {
@@ -40,7 +40,7 @@ function Nav() {
           MansBestFriend
         </Link>
         <Link className="nav-links" to="/dogs">
-          Meet our dogs
+          Meet our happy customers
         </Link>
         <Link className="nav-links" to="/about">
           About us

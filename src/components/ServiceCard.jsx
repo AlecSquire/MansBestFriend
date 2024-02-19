@@ -23,6 +23,7 @@ function ServiceCard() {
           </div>
         </div>
       ))}
+      <img src="src/assets/microchip.jpg" />
     </div>
   );
 }

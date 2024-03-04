@@ -8,6 +8,8 @@ import { useState, useEffect } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import MobileNav from "./MobileNav";
+import pawPrints from "../assets/Paw_Print.png";
+import { GiJumpingDog } from "react-icons/gi";
 
 function Nav() {
   const [desktop, setDesktop] = useState(true);
@@ -37,11 +39,11 @@ function Nav() {
     return (
       <header className="nav-bar">
         <Link className="site-logo" to="/">
-          MansBestFriend
+          Mans
+          <div style={{ color: "#00B67A" }}>Best</div>Friend
         </Link>
-        <Link className="nav-links" to="/dogs">
-          Meet our happy customers
-        </Link>
+        <GiJumpingDog size="2rem" color="black" />
+
         <Link className="nav-links" to="/about">
           About us
         </Link>
@@ -55,15 +57,19 @@ function Nav() {
     );
   } else {
     return (
-      <header className="mobile-nav-bar">
+      <header className="mobile-nav-bar" style={{ height: "3rem" }}>
         <Link className="site-logo" to="/">
-          MansBestFriend
+          <span>Mans</span>
+          <span style={{ fontWeight: "600", color: "#00B67A" }}>Best</span>
+          <span>Friend</span>
         </Link>
+        <GiJumpingDog size="2rem" color="black" />
+
         {click ? (
           <FiAlignJustify
             className="HamburgerMenu"
-            size="5rem"
-            color="black"
+            size="2rem"
+            color="#00B67A"
             onClick={handleHamburger}
           />
         ) : (
@@ -107,6 +113,7 @@ function Nav() {
             </div>
           </>
         )}
+        {/* <img src={pawPrints} style={{ width: "2rem" }} /> */}
       </header>
     );
   }

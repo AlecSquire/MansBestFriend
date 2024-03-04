@@ -8,18 +8,16 @@ import { useState, useEffect } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
 import MobileNav from "./MobileNav";
+import { GiJumpingDog } from "react-icons/gi";
 
 function Footer() {
   return (
     <div className="footer-title">
-      <h1>Footer</h1>
+      <Link className="site-logo" to="/">
+        MansBestFriend
+      </Link>
+      <GiJumpingDog size="2rem" color="black" />
       <footer className="footer">
-        <Link className="site-logo" to="/">
-          MansBestFriend
-        </Link>
-        <Link className="nav-links" to="/dogs">
-          Meet our happy customers
-        </Link>
         <Link className="nav-links" to="/about">
           About us
         </Link>

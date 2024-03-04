@@ -10,9 +10,7 @@ function MobileNav() {
       <Link className="site-logo" to="/">
         MansBestFriend
       </Link>
-      <Link className="nav-links" to="/dogs">
-        Meet our dogs
-      </Link>
+
       <Link className="nav-links" to="/about">
         About us
       </Link>

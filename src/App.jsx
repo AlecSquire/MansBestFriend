@@ -1,7 +1,9 @@
 import React from "react";
 import Footer from "./components/Footer";
 import "./App.css";
-import ServiceCard from "./components/ServiceCard";
+import ServiceDetail from "./components/ServiceDetail";
+// import ServiceCard from "./components/ServiceCard";
+
 import About from "./components/About";
 import Explore from "./components/Explore";
 import Contact from "./components/Contact";
@@ -12,6 +14,8 @@ import Hero from "./components/Hero";
 import MobileNav from "./components/MobileNav";
 import Nav from "./components/Nav";
 
+// import { makeServer } from "./mirageServer"; // Import the MirageJS server setup
+
 function App() {
   return (
     <>
@@ -19,13 +23,12 @@ function App() {
         <BrowserRouter>
           <Nav />
 
-          {/* <MobileNav /> */}
-
           <Routes>
             <Route path="/" element={<Hero />} />
             <Route path="/about" element={<About />} />
-            <Route path="/dogs" element={<RandomDog />} />
+
             <Route path="/explore" element={<Explore />} />
+            <Route path="/services/:id" element={<ServiceDetail />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />

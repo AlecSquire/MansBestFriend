@@ -5,12 +5,12 @@ import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 
 function Explore() {
-  const [services, setServices] = useState(null);
+  const [services, setServices] = useState([]);
 
   useEffect(() => {
     async function fetchServices() {
       try {
-        const res = await fetch(`api/services`);
+        const res = await fetch(`/api/services`);
         if (!res.ok) {
           throw new Error("Failed to fetch services");
         }
@@ -86,13 +86,13 @@ function Explore() {
               zIndex: 2,
             }}
           >
-            <Link to="/services/health">
+            <Link to="/Service/health">
               <button className="health">Health & Wellness</button>
             </Link>
-            <Link to="/services/care">
+            <Link to="/Service/care">
               <button className="care">Care & Activities</button>
             </Link>
-            <Link to="/services/assistance">
+            <Link to="/Service/assistance">
               <button className="assistance">Assistance</button>
             </Link>
             <p

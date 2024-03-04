@@ -11,7 +11,7 @@ function generateServiceData() {
       img: "Groomers.jpg",
       name: "Boarding",
       price: generatePrice(),
-      filter: "Accommodation",
+      filter: "Assistance",
       description:
         "Your pets stay overnight in your sitter’s home. They’ll be treated like part of the family in a comfortable environment.",
     },
@@ -20,7 +20,7 @@ function generateServiceData() {
       img: "Buy.jpg",
       name: "House Sitting",
       price: generatePrice(),
-      filter: "Accommodation",
+      filter: "Health",
       description:
         "Your sitter takes care of your pets in your home. Your pets will get all the attention they need without leaving home.",
     },
@@ -29,7 +29,7 @@ function generateServiceData() {
       img: "VetServices.jpg",
       name: "Dog Walking",
       price: generatePrice(),
-      filter: "Exercise",
+      filter: "Care",
       description:
         "Your dog gets a walk around your local area. Perfect for busy days and dogs with extra energy to burn.",
     },
@@ -38,7 +38,7 @@ function generateServiceData() {
       img: "PetPhotography.jpg",
       name: "Doggy Day Care",
       price: generatePrice(),
-      filter: "Accommodation",
+      filter: "Assistance",
       description:
         "Your dog spends the day at your sitter’s home. Drop them off in the morning and pick up a happy pup in the evening.",
     },
@@ -47,7 +47,7 @@ function generateServiceData() {
       img: "microchip.jpg",
       name: "Drop-In Visits",
       price: generatePrice(),
-      filter: "Visits",
+      filter: "Care",
       description:
         "Your sitter drops by your home to play with your pets, offer food, and give toilet breaks or clean the litter tray.",
     },

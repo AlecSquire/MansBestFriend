@@ -13,6 +13,7 @@ import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
 import Hero from "./components/Hero";
 import MobileNav from "./components/MobileNav";
 import Nav from "./components/Nav";
+import Service from "./components/Service";
 
 // import { makeServer } from "./mirageServer"; // Import the MirageJS server setup
 
@@ -29,6 +30,16 @@ function App() {
 
             <Route path="/explore" element={<Explore />} />
             <Route path="/services/:id" element={<ServiceDetail />} />
+            <Route
+              path="/Service/health"
+              element={<Service service="Health" />}
+            />
+            <Route path="/Service/care" element={<Service service="Care" />} />
+            <Route
+              path="/Service/assistance"
+              element={<Service service="Assistance" description />}
+            />
+
             <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />

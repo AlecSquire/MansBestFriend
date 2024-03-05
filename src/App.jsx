@@ -8,7 +8,13 @@ import About from "./components/About";
 import Explore from "./components/Explore";
 import Contact from "./components/Contact";
 import RandomDog from "./components/RandomDog";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import {
+  BrowserRouter,
+  Routes,
+  Route,
+  Link,
+  useParams,
+} from "react-router-dom";
 
 import Hero from "./components/Hero";
 import MobileNav from "./components/MobileNav";
@@ -29,7 +35,8 @@ function App() {
             <Route path="/about" element={<About />} />
 
             <Route path="/explore" element={<Explore />} />
-            <Route path="/services/:id" element={<ServiceDetail />} />
+
+            <Route path="/services/:serviceId" element={<ServiceDetail />} />
             <Route
               path="/Service/health"
               element={<Service service="Health" />}

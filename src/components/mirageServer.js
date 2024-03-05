@@ -76,9 +76,9 @@ export default function setupMirage() {
       });
 
       // Route handler to handle requests for individual service IDs
-      this.get("/services/:id", (schema, request) => {
-        const { id } = request.params;
-        return schema.db.services.find(id);
+      this.get("/services/:serviceId", (schema, request) => {
+        const { serviceId } = request.params;
+        return schema.db.services.find(serviceId);
       });
     },
   });

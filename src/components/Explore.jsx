@@ -2,7 +2,7 @@ import "../App.css";
 import ServiceDetail from "./ServiceDetail";
 import ServicesHero from "../assets/ServicesHero.jpeg";
 import React, { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Explore() {
   const [services, setServices] = useState([]);
@@ -111,14 +111,14 @@ function Explore() {
       <div className="ServiceCard">
         {services.map((service) => (
           <div key={service.id} className="service-item">
-            <Link to={`api/services/${service.id}`}>
+            <Link to={`/services/${service.id}`}>
               <div className="image-wrapper">
-                <img src={`src/assets/${service.img}`} alt={service.name} />
+                <img src={`/src/assets/${service.img}`} alt={service.name} />
               </div>
             </Link>
             <div className="service-info">
               <h3>{service.name}</h3>
-              <div>£{service.price}</div>
+              <div> Average price £{service.price}</div>
               <p>{service.description}</p>
 
               <button

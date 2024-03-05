@@ -85,13 +85,6 @@ function Nav() {
               <Link
                 onClick={handleHamburger}
                 className="hamnburger-nav-links"
-                to="/dogs"
-              >
-                Meet our dogs
-              </Link>
-              <Link
-                onClick={handleHamburger}
-                className="hamnburger-nav-links"
                 to="/about"
               >
                 About us

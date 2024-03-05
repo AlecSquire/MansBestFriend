@@ -1,44 +1,47 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import "../App.css";
 
 function ServiceDetail() {
-  const { id } = useParams(); // Destructure id directly from useParams
+  const { serviceId } = useParams();
+  console.log(serviceId); // (DestructureserviceId directly from useParams
 
-  const [service, setService] = useState(null); // Initialize service state with null
+  const [services, setServices] = useState(null); // Initialize service state with null
 
   useEffect(() => {
     async function fetchService() {
       try {
-        const res = await fetch(`api/services/${id}`);
+        const res = await fetch(`/api/services/${serviceId}`);
         if (!res.ok) {
           throw new Error("Failed to fetch service");
         }
         const data = await res.json();
-        setService(data);
+        setServices(data);
+        console.log(data);
       } catch (error) {
-        console.error(error);
+        console.error("Error occurred while fetching service:", error);
       }
     }
 
-    if (id) {
-      fetchService();
-    }
-  }, [id]);
-  console.log(id);
+    fetchService(); // Call fetchService function once when the component mounts
+  }, []);
   return (
     <div>
       <div className="ServiceCard">
-        {service && (
-          <div key={service.id} className="service-item">
+        {services ? (
+          <div key={services.id} className="service-item">
             <div className="image-wrapper">
-              <img src={`src/assets/${service.img}`} alt={service.name} />
+              <img src={`/src/assets/${services.img}`} alt={services.name} />
+              <p>{services.img}</p>
             </div>
             <div className="service-info">
-              <h3>{service.name}</h3>
-              <div>£{service.price}</div>
-              <p>{service.description}</p>
+              <h3>{services.name}</h3>
+              <div> Average price £{services.price}</div>
+              <p>{services.description}</p>
             </div>
           </div>
+        ) : (
+          <h2>Loading ...</h2>
         )}
       </div>
     </div>

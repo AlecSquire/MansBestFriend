@@ -1,8 +1,8 @@
 import "../App.css";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import rating from "../assets/rating.webp";
-import FormServices from "../components/FormServices";
+import FormServices from "../pages/FormServices";
 import backgroundImage from "../assets/dog-walking.jpeg"; // Import the background image
 import dogOwner1 from "../assets/dog-owner1.jpg";
 import dogOwner2 from "../assets/dogOwner2.jpg";
@@ -13,8 +13,13 @@ import { FaHome, FaHouseUser, FaDog, FaPaw } from "react-icons/fa";
 import { GiJumpingDog } from "react-icons/gi";
 
 export default function Hero() {
-  const handleHeroButton = () => {};
+  const [isMobile, setIsMobile] = useState(true);
 
+  useEffect(() => {
+    if (window.innerWidth > 590) {
+      setIsMobile(false);
+    }
+  }, []);
   return (
     <>
       <div
@@ -22,18 +27,18 @@ export default function Hero() {
         style={{
           background: `linear-gradient(0deg, rgba(0, 0, 0, 0.46), rgba(0, 0, 0, 0.46)), url(${backgroundImage}) no-repeat center center`,
           backgroundSize: "cover",
-          height: "20rem",
+          height: isMobile ? "20rem" : "110vh",
         }}
       >
         {" "}
         <h1> Loving Pet Care in Your Neighbourhood</h1>
         <div className="button-hero_container">
           <Link to="/explore" className="button-link">
-            <button className="button-hero">Business Owner?</button>
+            <button className="button-hero">Dog Owner?</button>
           </Link>
 
-          <Link to="/contact">
-            <button className="button-hero">Dog Owner?</button>
+          <Link to="/host">
+            <button className="button-hero">Business Owner?</button>
           </Link>
           <img src={rating} />
         </div>

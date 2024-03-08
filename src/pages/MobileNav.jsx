@@ -1,5 +1,5 @@
 import About from "./About";
-import Explore from "./Explore";
+import Explore from "./Services/Explore";
 import Contact from "./Contact";
 import RandomDog from "./RandomDog";
 import "../App.css";

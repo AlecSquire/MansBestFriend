@@ -109,6 +109,7 @@ body {
   cursor: pointer;
   transition: transform 0.1s ease-in-out;
   margin: 1rem;
+  background-color: #ff8c38;
 }
 .button-hero_container > button {
   color: white;
@@ -134,6 +135,7 @@ body {
   justify-content: center;
   align-items: center;
 }
+
 .about-hero-image {
   width: 100%;
   height: auto; /* Automatically adjust the height */
@@ -228,9 +230,12 @@ body {
   font-size: 2rem;
 }
 .site-logo {
-  font-family: "Indie Flower", cursive; /* Apply the Indie Flower font */
+  font-family: "Madimi One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+
   font-size: 46px; /* Adjust the font size as needed */
-  color: #00b67a; /* Your chosen color */
+  color: #4d4d4d; /* Your chosen color */
 }
 
 .service-item {
@@ -415,7 +420,9 @@ body {
 
     height: 90%;
     grid-gap: 10px; /* Adjusted horizontal gap for smaller screens */
-
+.active-link {
+  color: green;
+}
 .footer {
   display: flex;
   background-color: #ffcc8d;
@@ -433,4 +440,40 @@ body {
 }
 .site-logo {
   display: block;
+}
+
+.host-nav {
+  display: flex;
+}
+
+.host-nav a {
+  text-decoration: none;
+  color: #4d4d4d;
+  font-weight: 500;
+  padding: 5px 20px;
+  transition: transform 0.1s ease-in-out;
+}
+
+.host-nav a:hover {
+  color: #161616;
+  text-decoration: underline;
+  font-weight: 600;
+  transform: translate(1px, 1px);
+}
+
+.image-wrapper-offered {
+  width: 50%;
+
+  margin-top: 2rem;
+}
+.image-wrapper-offered img {
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.ServiceCardOffered {
+  background-color: white;
+  display: flex;
+  flex-direction: row;
 }

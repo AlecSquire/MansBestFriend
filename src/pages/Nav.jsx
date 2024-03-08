@@ -1,9 +1,9 @@
 import About from "./About";
-import Explore from "./Explore";
+import Explore from "./Services/Explore";
 import Contact from "./Contact";
 import RandomDog from "./RandomDog";
 import "../App.css";
-import { BrowserRouter, Routes, Route, Link } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Link, NavLink } from "react-router-dom";
 import { useState, useEffect } from "react";
 import { FiAlignJustify } from "react-icons/fi";
 import { MdClose } from "react-icons/md";
@@ -38,21 +38,56 @@ function Nav() {
   if (desktop) {
     return (
       <header className="nav-bar">
-        <Link className="site-logo" to="/">
+        <NavLink className="site-logo" to="/">
           Mans
           <div style={{ color: "#00B67A" }}>Best</div>Friend
-        </Link>
+        </NavLink>
         <GiJumpingDog size="2rem" color="black" />
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "#00B67A" : "inherit",
+            };
+          }}
+          className="nav-links"
+          to="/host"
+        >
+          Host Business
+        </NavLink>
 
-        <Link className="nav-links" to="/about">
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "#00B67A" : "inherit",
+            };
+          }}
+          className="nav-links"
+          to="/about"
+        >
           About us
-        </Link>
-        <Link className="nav-links" to="/explore">
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "#00B67A" : "inherit",
+            };
+          }}
+          className="nav-links"
+          to="/explore"
+        >
           Explore our services
-        </Link>
-        <Link className="nav-links" to="/contact">
+        </NavLink>
+        <NavLink
+          style={({ isActive }) => {
+            return {
+              color: isActive ? "#00B67A" : "inherit",
+            };
+          }}
+          className="nav-links"
+          to="/contact"
+        >
           Contact
-        </Link>
+        </NavLink>
       </header>
     );
   } else {
@@ -82,6 +117,13 @@ function Nav() {
             />
             <div className="hamburgerDown">
               {" "}
+              <Link
+                onClick={handleHamburger}
+                className="hamnburger-nav-links"
+                to="/host"
+              >
+                Host Business
+              </Link>
               <Link
                 onClick={handleHamburger}
                 className="hamnburger-nav-links"

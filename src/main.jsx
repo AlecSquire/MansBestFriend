@@ -2,7 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import App from "./App";
 import "./index.css";
-import setupMirage from "./components/mirageServer.js";
+import setupMirage from "./pages/mirageServer.js";
 
 // Initialize MirageJS server
 

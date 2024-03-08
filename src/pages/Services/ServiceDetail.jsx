@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import "../App.css";
+import { useParams, Link } from "react-router-dom";
 
 function ServiceDetail() {
   const { serviceId } = useParams();
@@ -26,25 +25,28 @@ function ServiceDetail() {
     fetchService(); // Call fetchService function once when the component mounts
   }, []);
   return (
-    <div>
-      <div className="ServiceCard">
-        {services ? (
-          <div key={services.id} className="service-item">
-            <div className="image-wrapper">
-              <img src={`/src/assets/${services.img}`} alt={services.name} />
-              <p>{services.img}</p>
+    <>
+      <Link to="/explore"> Back to all services </Link>
+      <div>
+        <div className="ServiceCard">
+          {services ? (
+            <div key={services.id} className="service-item">
+              <div className="image-wrapper" style={{ background: "red" }}>
+                <img src={`/src/assets/${services.img}`} alt={services.name} />
+                <p>{services.img}</p>
+              </div>
+              <div className="service-info">
+                <h3>{services.name}</h3>
+                <div> Average price £{services.price}</div>
+                <p>{services.description}</p>
+              </div>
             </div>
-            <div className="service-info">
-              <h3>{services.name}</h3>
-              <div> Average price £{services.price}</div>
-              <p>{services.description}</p>
-            </div>
-          </div>
-        ) : (
-          <h2>Loading ...</h2>
-        )}
+          ) : (
+            <h2>Loading ...</h2>
+          )}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 

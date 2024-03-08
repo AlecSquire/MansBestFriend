@@ -1,6 +1,5 @@
-import "../App.css";
 import ServiceDetail from "./ServiceDetail";
-import ServicesHero from "../assets/ServicesHero.jpeg";
+import ServicesHero from "../../assets/ServicesHero.jpeg";
 import React, { useState, useEffect } from "react";
 import { Link, useParams } from "react-router-dom";
 

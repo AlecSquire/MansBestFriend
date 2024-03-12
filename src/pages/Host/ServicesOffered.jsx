@@ -81,7 +81,7 @@ function ServicesOffered() {
                     }}
                   >
                     <Link
-                      to={`/host/offered/${el.id}`}
+                      to={`${el.id}`}
                       key={serviceId}
                       className="img-offered-container"
                       style={{
@@ -90,9 +90,7 @@ function ServicesOffered() {
                         size: "5rem",
                         marginLeft: "13rem",
                       }}
-                    >
-                      Click here for more details{" "}
-                    </Link>
+                    ></Link>
                   </div>
                 </div>{" "}
               </div>

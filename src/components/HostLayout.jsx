@@ -12,7 +12,8 @@ function HostLayout() {
               color: isActive ? "#161616" : "black",
             };
           }}
-          to={"/Host"}
+          to={"."}
+          // "." isntead of /host as this enables easier changes to be made to the naming of the route
         >
           {" "}
           Dashboard{" "}
@@ -53,8 +54,7 @@ function HostLayout() {
           }}
           to={"Reviews"}
         >
-          {" "}
-          Reviews{" "}
+          Reviews
         </NavLink>
       </nav>
       <Outlet />

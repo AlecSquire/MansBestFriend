@@ -9,24 +9,22 @@ export default function About() {
         <img src={bgImg} className="about-hero-image" alt="About Hero" />
       </div>
       <div className="about-page-content">
-        <h1>
-          Don’t settle for a kennel when you could pamper your pooch in a
-          mansion.
-        </h1>
+        <h4>Unleash the paw-sibilities with MansBestFreind!</h4>
         <p>
-          Our mission is to provide top-notch housing solutions for dogs of all
-          breeds. From cozy beds to spacious play areas, we ensure that your
-          furry friend feels right at home.
+          At FetchMate, we're on a mission to connect dog owners with trusted
+          and reliable dog walkers, sitters, and groomers in their local area.
+          Whether your pup needs a leisurely stroll, a cozy home away from home,
+          or a pampering grooming session, we've got you covered.
         </p>
         <p>
-          Our team consists of passionate dog lovers who understand the
-          importance of creating a safe and comfortable environment for every
-          dog.
+          Our platform is built by dog lovers, for dog lovers. We understand
+          that every pooch is unique, which is why we're committed to providing
+          personalized care and attention to every furry friend.
         </p>
       </div>
       <div className="about-page-cta">
-        <h2>Your dog's dreams await.</h2>
-        <Link className="link-button" to="/Random-Dog">
+        <h2>Join the pack today!</h2>
+        <Link className="link-button" to="..">
           Explore what we offer
         </Link>
       </div>

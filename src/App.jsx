@@ -28,6 +28,9 @@ import Service from "./pages/Service";
 import HostLayout from "./components/HostLayout";
 import Offered from "./pages/Host/Offered";
 import ServicesOffered from "./pages/Host/ServicesOffered";
+import Details from "./pages/Host/HostNav/Details";
+import Photos from "./pages/Host/HostNav/Photos";
+import Pricing from "./pages/Host/HostNav/Pricing";
 
 // import { makeServer } from "./mirageServer"; // Import the MirageJS server setup
 
@@ -63,7 +66,11 @@ function App() {
                 <Route path="Income" element={<Income />} />
                 <Route path="Reviews" element={<Reviews />} />
                 <Route path="Offered" element={<ServicesOffered />} />
-                <Route path="Offered/:serviceId" element={<Offered />} />
+                <Route path="Offered/:serviceId" element={<Offered />}>
+                  <Route index element={<Details />} />
+                  <Route path="Pricing" element={<Pricing />} />
+                  <Route path="Photos" element={<Photos />} />
+                </Route>
               </Route>
             </Route>
           </Routes>

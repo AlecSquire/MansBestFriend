@@ -1,10 +1,13 @@
-import ServiceDetail from "./ServiceDetail";
 import ServicesHero from "../../assets/ServicesHero.jpeg";
-import React, { useState, useEffect } from "react";
-import { Link, useParams } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { Link, useSearchParams } from "react-router-dom";
 
 function Explore() {
   const [services, setServices] = useState([]);
+  let [searchParams, setSearchParams] = useSearchParams();
+  const typeFilter = searchParams.get("filter");
+  console.log(typeFilter);
+  console.log(searchParams);
 
   useEffect(() => {
     async function fetchServices() {
@@ -39,6 +42,11 @@ function Explore() {
     return { backgroundColor: bgcolor };
   };
 
+  const fetchServices = typeFilter
+    ? services.filter(
+        (service) => service.filter.toLowerCase() === typeFilter.toLowerCase()
+      )
+    : services;
   return (
     <>
       <div
@@ -85,15 +93,24 @@ function Explore() {
               zIndex: 2,
             }}
           >
-            <Link to="/Service/health">
-              <button className="health">Health & Wellness</button>
-            </Link>
-            <Link to="/Service/care">
-              <button className="care">Care & Activities</button>
-            </Link>
-            <Link to="/Service/assistance">
-              <button className="assistance">Assistance</button>
-            </Link>
+            <button
+              onClick={() => setSearchParams("health")}
+              className="health"
+            >
+              Health & Wellness
+            </button>
+
+            <button onClick={() => setSearchParams("care")} className="care">
+              Care & Activities
+            </button>
+
+            <button
+              onClick={() => setSearchParams("Assistance")}
+              className="assistance"
+            >
+              Assistance
+            </button>
+
             <p
               style={{
                 color: "#4d4d4d",
@@ -108,7 +125,7 @@ function Explore() {
       </div>
       (
       <div className="ServiceCard">
-        {services.map((service) => (
+        {fetchServices.map((service) => (
           <div key={service.id} className="service-item">
             <Link to={`/services/${service.id}`}>
               <div className="image-wrapper">
